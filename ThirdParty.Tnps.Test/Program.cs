@@ -20,7 +20,7 @@ namespace ThirdParty.Tnps.Test
             pushData.m_type = Body.TYPE_NOTIFICATION;
 
             pushData.accessID = 1500014317;//replace it by your accessID
-            pushData.secretKey = "xxx";//replace it by your secret key
+            pushData.secretKey = "xxxx";//replace it by your secret key
             pushData.token = "00ce7e5bb088f6f9065b5ba9a7b191fda19a";//replace it by your token
 
             //HttpUtility.UrlEncode
