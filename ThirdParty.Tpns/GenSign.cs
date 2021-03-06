@@ -7,18 +7,11 @@ namespace ThirdParty.Tpns
     public class GenSign
     {
 
-        // Main Method 
-        // static public void Main(String[] args)
-        // {
-        //     string reqBody =
-        //         "{\"audience_type\": \"account\",\"platform\": \"android\",\"message\": {\"title\": \"test title\",\"content\": \"test content\",\"android\": { \"action\": {\"action_type\": 3,\"intent\": \"xgscheme://com.xg.push/notify_detail?param1=xg\"}}},\"message_type\": \"notify\",\"account_list\": [\"5822f0eee44c3625ef0000bb\"] }";
-        //     string genSign = GenSign.genSign("1565314789", "1500001048", "reqBody", "1452fcebae9f3115ba794fb0fff2fd73");
-        //     Console.WriteLine(genSign);
-        // } 
+
         public static string HmacSHA256(string key, string data)
         {
             string hash;
-            ASCIIEncoding encoder = new ASCIIEncoding();
+            UTF8Encoding encoder = new UTF8Encoding();
             Byte[] code = encoder.GetBytes(key);
             using (HMACSHA256 hmac = new HMACSHA256(code))
             {
@@ -27,6 +20,8 @@ namespace ThirdParty.Tpns
             }
             return hash;
         }
+
+
 
         public static string ToHexString(byte[] array)
         {

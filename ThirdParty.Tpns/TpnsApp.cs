@@ -54,8 +54,6 @@ namespace ThirdParty.Tpns
             if (sign.Length == 0)
                 return "generate sign error";
 
-            //url = "http://192.168.1.100/http/about?cityid=255";
-            //url = "https://www.lovejiajiao.com/http/about";
 
             try
             {
@@ -114,7 +112,6 @@ namespace ThirdParty.Tpns
             message.setType(pushData.m_type);
             body.message = message;
 
-            //HttpUtility.UrlEncode
             message.setTitle(pushData.title);
             message.setContent((pushData.content));
 
